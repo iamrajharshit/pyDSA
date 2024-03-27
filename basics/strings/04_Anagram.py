@@ -16,6 +16,7 @@ class Solutions:
 
 strs=['ert','tre','fgh','ggf','yui','iuy']          
 s=Solutions()
+print(s.grAnagram(strs))
 
 
 
