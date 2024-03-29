@@ -1,4 +1,5 @@
 '''
+#leetcode 20
 Given a string s containing just the char '(',')','{','}','[',']'
 determine if the input string is valid or not.
 
