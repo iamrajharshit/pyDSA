@@ -11,14 +11,17 @@ Output:[-1,-1,-1]
 def nextGen(A):
     n = len(A)  # Length of the input array
     stack = []  # Initialize an empty stack to hold elements and their indices
-    nge = [-1] * len(A)  # Initialize an array to store the next greater elements, initialized with -1
+    nge = [-1] *n  # Initialize an array to store the next greater elements, initialized with -1
 
     # Iterate over the elements of the input array along with their indices
     for i, A in enumerate(A):
+        print(i,"-->",A)
+
         # While the stack is not empty and the top element of the stack is less than the current element
         while stack and stack[-1][0] < A:
             # Pop the top element from the stack and update its next greater element to the current element
             nge[stack.pop()[1]] = A
+            
 
         # Push the current element and its index onto the stack
         stack.append((A, i))
