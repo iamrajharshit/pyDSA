@@ -15,7 +15,7 @@ def nextGen(A):
 
     # Iterate over the elements of the input array along with their indices
     for i, A in enumerate(A):
-        print(i,"-->",A)
+        #print(i,"-->",A)
 
         # While the stack is not empty and the top element of the stack is less than the current element
         while stack and stack[-1][0] < A:
