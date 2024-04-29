@@ -22,7 +22,7 @@ print(a)
 x=sol(a)
 print(a)            
 
-# 2 d sol
+# 2nd sol
 num=[1,2,0,5,0,15,0]
 
 def move_zeros(num):
