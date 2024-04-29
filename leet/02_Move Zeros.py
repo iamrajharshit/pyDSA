@@ -31,4 +31,5 @@ def move_zeros(num):
         if num[j]!=0:
             num[pos],num[j]=num[j],num[pos]
             pos=pos+1
+   
     return num
