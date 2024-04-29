@@ -21,3 +21,14 @@ def sol(a):
 print(a)
 x=sol(a)
 print(a)            
+
+# 2 d sol
+num=[1,2,0,5,0,15,0]
+
+def move_zeros(num):
+    pos=0
+    for j in range(len(num)):
+        if num[j]!=0:
+            num[pos],num[j]=num[j],num[pos]
+            pos=pos+1
+    return num
