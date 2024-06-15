@@ -22,7 +22,7 @@ def insertion_sort(A):
                 A[j],A[j+1]=A[j+1],A[j]
             else:
                 break #break out of the inner loop
-    print(A)
+    return A
 
 
 
@@ -34,4 +34,4 @@ def insertion_sort(A):
 #              j-=1
 
 #     return A
-x=insertion_sort(A)
+print(insertion_sort(A))

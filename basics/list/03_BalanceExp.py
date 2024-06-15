@@ -22,8 +22,8 @@ def balancing (exp):
     if stack:
         return False
     else:
-        return True
+        return "Balanced"
     
-exp="[]{}()"
+exp="[()]{}{[()()]()}"
 x=balancing(exp)    
 print(x)
