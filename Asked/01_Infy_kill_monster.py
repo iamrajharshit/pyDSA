@@ -53,7 +53,7 @@ def input_num():
         c=0
         
         for key, value in mons_b_dict.items():
-            if exp > key:
+            if exp >= key:
                 exp +=value
                 c=c+1
 
