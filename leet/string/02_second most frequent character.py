@@ -20,3 +20,4 @@ def sec2(str):
 print(sec2("aaacccccccdd"))
 
 
+
