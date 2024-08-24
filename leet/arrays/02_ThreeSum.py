@@ -13,8 +13,9 @@ def threesum(arr):
         l=i+1
         r=len(arr)-1
         if i>0 and arr[i]==arr[i-1]:
+            #i=i+1
             continue
-
+        
         while(l<r):
             total=arr[i]+arr[l]+arr[r]
             if total <0:
