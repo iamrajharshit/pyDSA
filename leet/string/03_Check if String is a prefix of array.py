@@ -9,8 +9,7 @@ Return true if s is a prefix string of words, or false otherwise.
 '''
 
 
-
-def isPrefixString(self, s: str, words: List[str]) -> bool:
+def isPrefixString(s, words):
     ans=""
     for i in range(len(words)):
         ans+=words[i]
