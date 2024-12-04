@@ -39,24 +39,38 @@ def isValid(s):
 
 
 def isvalid(A):
-    stack=[]
+    # Initialize an empty stack to keep track of opening brackets
+    stack = []
+    
+    # Iterate through each character in the input string A
     for a in A:
-        if a=='(' or a=="[" or a=="{":
+        # If the character is an opening bracket, push it onto the stack
+        if a == '(' or a == "[" or a == "{":
             stack.append(a)
         else:
-            if len(stack)==0:
+            # If the character is a closing bracket and the stack is empty,
+            # it means there is no corresponding opening bracket, so return 0 (invalid)
+            if len(stack) == 0:
                 return 0
-            elif (stack[-1] == "(" and a==")") or (stack[-1] == "[" and a=="]") or (stack[-1] == "{" and a=="}"):
+            # Check if the top of the stack has the corresponding opening bracket
+            elif (stack[-1] == "(" and a == ")") or(stack[-1] == "[" and a == "]") or (stack[-1] == "{" and a == "}"):
+                # If matched, remove the opening bracket from the stack
                 stack.pop()
             else:
+                # If there is a mismatch, return 0 (invalid)
                 return 0
-            
-        if len(stack)!=0:
-            return 0
-        else:
-            return 1
+    
+    # After processing all characters, check if the stack is empty
+    # If the stack is not empty, it means there are unmatched opening brackets
+    if len(stack) != 0:
+        return 0
+    else:
+        # If the stack is empty, it means all brackets are balanced
+        return 1
 
-s="()([])"
-x=isValid(s)
-print(x)
+# Test the function with a sample input
+s = "()([])"
+x = isvalid(s)  # Call the function with the test string
+print(x)  # Output the result: 1 if valid, 0 if invalid
+
 
